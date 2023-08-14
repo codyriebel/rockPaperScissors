@@ -35,8 +35,6 @@ const getComputerChoice = () => {
   }
 }
 
-console.log(getComputerChoice());
-
 /* 
 function playRound(playerSelection, computerSelection)
 return string that declares winner
@@ -58,15 +56,36 @@ const isWinner = (player, computer) => {
 
 function playRound(playerSelection, computerSelection) {
   const playerSelectionLower = playerSelection.toLowerCase();
-  if (playerSelection === computerSelection) {
+  if (playerSelectionLower === computerSelection) {
     return 'Tie!'
-  } else if (isWinner(playerSelection, computerSelection)) {
+  } else if (isWinner(playerSelectionLower, computerSelection)) {
     return `Winner! ${playerSelection} beats ${computerSelection}`;
   } else {
     return `Loser! ${computerSelection} beats ${playerSelection}`;
   }
 }
  
-const playerSelection = "rock";
-const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection));
+function game() {
+  let wins = 0;
+  let losses = 0;
+  for (i=0; i<5; i++) {
+    let userInput = prompt('Rock, paper, or scissors?');
+    let round = playRound(userInput, getComputerChoice());
+    console.log(`round ${i}: ${round}`)
+    if (round.includes('Winner')) {
+      wins += 1;
+    } else if (round.includes('Loser')) {
+      losses += 1;
+    }
+  }
+  console.log(`FINAL SCORE: player ${wins}, computer ${losses}`)
+  if (wins === losses) {
+    console.log('TIED');
+  } else if (wins > losses) {
+    console.log('WIN!!!');
+  } else {
+    console.log('LOST...');
+  }
+}
+
+game();
