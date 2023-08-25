@@ -29,12 +29,11 @@ function reset() {
   results.textContent = '';
   score.textContent =  '';
   winner.textContent = '';
+  parent.removeChild(resetButton);
   activateButtons();
 } 
 
 function createResetButton() {
-  let parent = document.querySelector('.container.text');
-  let resetButton = document.createElement('button');
   resetButton.textContent = 'Play again?';
   resetButton.addEventListener('click', reset);
   parent.appendChild(resetButton);
@@ -84,5 +83,8 @@ let results = document.querySelector('#results');
 let score =  document.querySelector('#score');
 let winner = document.querySelector('#winner');
 const buttons = document.querySelectorAll('img');
+
+let parent = document.querySelector('.textContainer');
+let resetButton = document.createElement('button');
 
 activateButtons();
