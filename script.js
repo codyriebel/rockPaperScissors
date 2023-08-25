@@ -33,7 +33,7 @@ function reset() {
 } 
 
 function createResetButton() {
-  let parent = document.querySelector('#winner');
+  let parent = document.querySelector('.container.text');
   let resetButton = document.createElement('button');
   resetButton.textContent = 'Play again?';
   resetButton.addEventListener('click', reset);
