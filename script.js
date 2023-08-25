@@ -81,6 +81,6 @@ let computerScore = 0;
 let results = document.querySelector('#results');
 let score =  document.querySelector('#score');
 let winner = document.querySelector('#winner');
-const buttons = document.querySelectorAll('button');
+const buttons = document.querySelectorAll('img');
 
 activateButtons();

@@ -1,0 +1,17 @@
+body {
+  text-align: center;
+} 
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  margin: 25px 100px;
+  gap: 50px;
+}
+
+img {
+  width: 33%;
+  height: auto;
+  border: solid 2px;
+  
+}
