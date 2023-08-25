@@ -1,16 +1,16 @@
 body {
   text-align: center;
-} 
+}
 
-.imageContainer {
+.container {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   margin: 25px 100px;
   gap: 50px;
 }
 
-img {
-  width: 33%;
+img, h1 {
+  width: 30%;
   height: auto;
   border: solid 2px;
   

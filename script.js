@@ -18,6 +18,8 @@ function buttonEventHandler(event) {
 function activateButtons() {
   buttons.forEach((button) => {
     button.addEventListener('click', buttonEventHandler);
+    button.addEventListener('mouseenter', () => button.style.opacity = 0.5);
+    button.addEventListener('mouseleave', () => button.style.opacity = 1);
   });
 }
 
